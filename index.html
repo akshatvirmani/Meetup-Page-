@@ -1,326 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Events</title>
-<head>
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<style>
 
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		section {
-			width: 100%;
-			height: 120vh;
-			background:
-url('https://i0.wp.com/blog.couchbase.com/wp-content/uploads/2022/06/image4.jpg?resize=900%2C675&ssl=1');
-			background-size: cover;
-		}
-		
-		section .leftBox {
-			width: 50%;
-			height: 100%;
-			float: left;
-            margin-top: 40px;
-			padding: 50px;
-			box-sizing: border-box;
-		}
-		
-		section .leftBox .content {
-			color: #fff;
-			background: rgba(0, 0, 0, 0.5);
-			padding: 40px;
-			transition: .5s;
-		}
-		
-		section .leftBox .content:hover {
-			background: #0d6efd;
-		}
-		section .leftBox .content h1 {
-			margin: 0;
-			padding: 0;
-			font-size: 50px;
-			text-transform: uppercase;
-		}
-		
-		section .leftBox .content p {
-			margin: 10px 0 0;
-			padding: 0;
-		}
-		
-		section .events {
-			position: relative;
-            
-			width: 50%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0.603);
-			float: right;
-			box-sizing: border-box;
-		}
-		
-		section .events ul {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			
-			padding: 40px;
-			box-sizing: border-box;
-		}
-		
-		section .events ul li {
-			list-style: none;
-            width: 600px;
-			background: #fff;
-			box-sizing: border-box;
-			height: 210px;
-			margin: 15px 0;
-		}
-		
-	
-		section .events ul li .time {
-			position: relative;
-			padding: 60px;
-            
-        margin-bottom: 15px;
-        background: #262626;
-			box-sizing: border-box;
-			width: 30%;
-			height: 100%;
-			float: left;
-			text-align: center;
-			transition: .5s;
-		}
-		
-		
-		section .events ul li:hover .time {
-			background: #0d6efd;
-		}
-		
-		
-		section .events ul li .time h2 {
-			position: absolute;
-			margin: 0;
-			padding: 0;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: #fff;
-			font-size: 45px;
-			line-height: 30px;
-		}
-		
-		
-		section .events ul li .time h2 span {
-			font-size: 30px;
-		}
-		
-		
-		section .events ul li .details {
-			padding: 20px;
-			background: #fff;
-			box-sizing: border-box;
-			width: 70%;
-			height: 100%;
-			float: left;
-		}
-		
-		
-		section .events ul li .details h3 {
-			position: relative;
-			margin: 0;
-			padding: 0;
-			font-size: 22px;
-		}
-		
-		section .events ul li .details p {
-			position: relative;
-			margin: 10px 0 0;
-			padding: 0;
-			font-size: 16px;
-		}
-		
-		section .events ul li .details a {
-			display: inline-block;
-			text-decoration: none;
-			padding: 10px 15px;
-			border: 1.5px solid #262626;
-			margin-top: 8px;
-			font-size: 18px;
-			transition: .5s;
-		}
-		
-		section .events ul li .details a:hover {
-			background: #0d6efd;
-			color: #fff;
-			border-color: #0d6efd;
-		}
-	</style>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>EduHub Community</title>
+  
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Krub:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-<header>
-<nav class="nav-bar">
-    <a href="home.html"><img src="logo.png" alt=""></a>
-	<br><br><br>
-    <ul class="nav-items">
-        <li class="firstl"> <a href="home.html">HOME</a></li>
-        <li class="firstl"> <a href="home.html">About</a></li>
-        <li class="firstl"> <a href="home.html">Opportunities</a></li>
-        <li class="firstl"><a href="home.html">Events</a></li>
-        <li class="firstl"><a href="home.html">Team</a></li>
-        <li class="firstl"><a href="home.html">Internships</a></li>
-        <li class="firstl"><a href="https://eduhubcommunity.tech/gallery.html">GALLERY</a></li>
-        <li  class="firstl"><a href="https://linktr.ee/EduhubCommunity">CONTACT</a></li>
-        <li id="explore" class="firstl explore"><a href="index4.html"> Sponsor Us </a></li>
-    </ul>
-</nav>
-    
-</header>
-	<section>
-		<div class="leftBox">
-			<div class="content">
-				<h1>
-					Events
-				</h1>
-				
-<p>
-    It’s a community for the people by the people. The vision of the community is to build an environment where people can learn together and implement together. It provides people the opportunity to work with them showcase their talent, and work in-team				</p>
-
-			</div>
-		</div>
-
-		<div class="events">
-			<ul>
-				<li>
-					<div class="time">
-						<h2>
-							Jaipur<br><span></span>
-						</h2>
-					</div>
-					<div class="details">
-						<h3>
-							Where is the event happening?
-						</h3>
-						
-<p>
-    Jaipur, the capital of Rajasthan is popularly known as the Pink City.and may be the First Meet Place.
-<br><br>
-COMING SOON .......						</p>
-
-<br>
-						<a href="#">View Details</a>
-					</div>
-					<div style="clear: both;"></div>
-				</li>
-
-				<li>
-					<div class="time">
-						<h2>
-							Delhi<br><span></span>
-						</h2>
-					</div>
-					<div class="details">
-						<h3>
-							Where is the event happening?
-						</h3>
-						
-<p>
-    New Delhi is best known as the location of India's national government and now It will be known for our Second Meet Up.
-<br> <br> COMING SOON......						</p>
-
-						<a href="#">View Details</a>
-					</div>
-					<div style="clear:both;"></div>
-				</li>
-
-				<li>
-					<div class="time">
-						<h2>
-							Udaipur<br><span></span>
-						</h2>
-					</div>
-					<div class="details">
-						<h3>
-							Where is the event happening?
-						</h3>
-						
-<p> Udaipur, formerly the capital of the Mewar Kingdom, is a city in the western Indian state of Rajasthan.May be the third place of Meet Up.
-    <br><br> COMING SOON......					</p>
-
-
-						<a href="#">View Details</a>
-					</div>
-					<div style="clear:both;"></div>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-
-
-<footer>
-	<div class="footer">
-	<div class="main-content">
-        <div class="firstb box">
-            <h2>EduHub <br> Community</h2>
-            <div class="content">Chomu Udaipuria Mod,<br>
-                Jaipur,<br>
-                Rajasthan.</div>
-                <h3>Email:</h3>
-                <a href="eduhub.community@gmail.com">eduhub.community@gmail.com</a>
-        </div>
-        <div class="secondb box">
-            <div class="content">
-                <h2 class="h">Quick Access</h2>
-                <ul class="items1">
-                    <li class="firstl"> <a href="home.html">HOME</a></li>
-            <li class="firstl"> <a href="home.html">About</a></li>
-            <li class="firstl"> <a href="home.html">Opportunities</a></li>
-             <li class="firstl"><a href="home.html">Events</a></li>
-            <li class="firstl"><a href="home.html">Team</a></li>
-            
-        </ul>
-            </div>
-        </div>
-        <div class="thirdb box">
-            <div class="content">
-                <h2 class="h">Our Outreach</h2>
-                <ul class="items2">
-                    <li class="firstl"> <a href="https://linktr.ee/EduhubCommunity">social media</a></li>
-            <li class="firstl"> <a href="home.html">msme</a></li>
-            <li class="firstl"> <a href="home.html">code of conduct</a></li>
-             <li class="firstl"><a href="home.html"> Reach out to us for any Queries</a></li>
-            
-        </ul>
-            </div>
-            </div>
-            <div class="fourth box">
-                <div class="content4">
-                    <h2 class="h"> Subscribe</h2>
-                    <p>Stay Updated for our Exciting events</p>
-                    <input type="text" required >
-                    <button type="submit">Subscribe</button>
-                </div>
-            </div>
-        </div>
-		
-</div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
    
-<div class="social">
-	<div class="social-links">
-	  
- <a target="_blank" href="https://www.facebook.com/eduhubcommunity" class="facebook link"><i class="fa-brands fa-facebook-f"></i></a>
- <a target="_blank" href="https://www.instagram.com/eduhub_community/" class="instagram link"><i class="fa-brands fa-instagram"></i></a>
- <a target="_blank" href="https://www.youtube.com/channel/UCPpG3qqMH_0QDvSzHyjjZJQ" class="google-plus link"><i class="fa-brands fa-youtube"></i></a>
- <a target="_blank" href="https://www.linkedin.com/company/eduhub-community" class="linkedin link"><i class="fa-brands fa-linkedin-in"></i></a>
- <a target="_blank" href="https://www.linkedin.com/company/eduhub-community" class="linkedin link"><i class="fa-brands fa-twitter"></i></a>
+      <a href="index.html" class="logo"><img src="logo.png" alt="" class="img-fluid" /></a>
 
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
+          <li><a class="nav-link scrollto" href="#about">ABOUT</a></li>
+          <li><a class="nav-link scrollto" href="#services">OPPORTUNITIES</a></li>
+          <li><a class="nav-link scrollto" href="#event">EVENTS</a></li>
+          <li><a class="nav-link scrollto" href="internship-detaills.html">TEAM</a></li>
+          <li><a class="nav-link scrollto" href="gallery.html">INTERNSHIPS</a></li>
+          <li><a class="nav-link scrollto" href="#team">GALLERY</a></li>
+          <li><a class="nav-link scrollto" href="#contact">CONTACT</a></li>
+          <li>
+            <a class="getstarted scrollto" href="#upcoming-events">SPONSOR US</a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
 
-</div> 
-<a target="_blank" href="home.html" class="arrow link"><i class="fa-solid fa-arrow-up"></i></a>
+  <main id="main">
+    <section>
+      <div class="leftBox">
+        <div class="content">
+          <h1>
+            Events
+          </h1>
+          <p>It’s a community for the people by the people. The vision of the community is to build an
+           environment where people can learn together and implement together. It provides people the opportunity 
+           to work with them showcase their talent, and work in-team</p>
+        </div>
+      </div>
+  
+      <div class="events">
+        <ul>
+          <li>
+            <div class="time">
+              <h2>
+                Jaipur<br><span></span>
+              </h2>
+            </div>
+            <div class="details">
+              <h3>
+                Where is the event happening?
+              </h3>
+              
+              <p>
+                Jaipur, the capital of Rajasthan is popularly known as the Pink City.and may be the First Meet Place.
+              <br><br>
+              COMING SOON .......	</p>
+  
+              <br>
+              <a href="#">View Details</a>
+            </div>
+            <div style="clear: both;"></div>
+          </li>
+  
+          <li>
+            <div class="time">
+              <h2>
+                Delhi<br><span></span>
+              </h2>
+            </div>
+            <div class="details">
+              <h3>
+                Where is the event happening?
+              </h3>
+              
+  <p>
+      New Delhi is best known as the location of India's national government and now It will be known for our Second Meet Up.
+  <br> <br> COMING SOON......						</p>
+  
+              <a href="#">View Details</a>
+            </div>
+            <div style="clear:both;"></div>
+          </li>
+  
+          <li>
+            <div class="time">
+              <h2>
+                Udaipur<br><span></span>
+              </h2>
+            </div>
+            <div class="details">
+              <h3>
+                Where is the event happening?
+              </h3>
+              
+  <p> Udaipur, formerly the capital of the Mewar Kingdom, is a city in the western Indian state of Rajasthan.May be the third place of Meet Up.
+      <br><br> COMING SOON......					</p>
+  
+  
+              <a href="#">View Details</a>
+            </div>
+            <div style="clear:both;"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  </main>
+  <!-- End #main -->
 
-  </div>
-</footer>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>EduHub Community</h3>
+            <p>
+              Chomu Udaipuria Mod, <br />
+              Jaipur,<br />
+              Rajasthan. <br /><br />
+              <!-- <strong>Phone:</strong> +1 5589 55488 55<br /> -->
+              <strong>Email:</strong>
+            <p>
+              <a target="_blank" href="mailto:eduhub.community@gmail.com">eduhub.community@gmail.com</a>
+            </p><br />
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Quick Access</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#hero">Home</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#about">About</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#services">Opportunities</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#event">Events</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#team">Team</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Outreach</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="https://linktr.ee/EduhubCommunity">Social Media</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="https://drive.google.com/file/d/1G3uDu9hbX7_oFa2B1bikeaTBPr2wBxs-/view?usp=sharing">MSME</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a
+                  href="https://docs.google.com/document/d/1gHcw8HsAeLciSVOA_TXPIql9F362hPlC/edit">Code of Conduct</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a
+                  href="https://docs.google.com/forms/d/1XUnnCtcWtDgnCSQmBgqPjUQ6H5KlE8Ek1LJpXX76Hg4/viewform?edit_requested=true">Reach
+                  out to us for any Queries</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Subscribe</h4>
+            <p>Stay Updated for our Exciting events</p>
+            <form action="" method="post">
+              <input type="email" name="email" /><input type="submit" value="Subscribe" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+        <a target="_blank" href="https://www.facebook.com/eduhubcommunity" class="facebook"><i
+            class="bx bxl-facebook"></i></a>
+        <a target="_blank" href="https://www.instagram.com/eduhub_community/" class="instagram"><i
+            class="bx bxl-instagram"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCPpG3qqMH_0QDvSzHyjjZJQ" class="google-plus"><i
+            class="bx bxl-youtube"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/company/eduhub-community" class="linkedin"><i
+            class="bx bxl-linkedin"></i></a>
+        <a target="_blank" href="https://twitter.com/CommunityEduhub" class="twitter"><i
+            class="bx bxl-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
